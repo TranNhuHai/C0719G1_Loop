@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>N numbers Prime </title>
+</head>
+<body>
+<p id="print"></p>
+<script>
+    function printNumberPrime() {
+        let number = prompt("nhap N");
+        let count  = 0;
+        let num    = 2;
+        while (count<number){
+                if(checkPrimeNumber(num)){
+                    document.write(num + " ");
+                    count++;
+                }
+                num++;
+                function checkPrimeNumber(){
+
+                        for(let i = 2; i<=Math.sqrt(num);i++){
+                            if(num%i == 0){
+                                return false;
+                                break;
+                            }
+                        }return true;
+                    }
+            }
+
+    }
+    printNumberPrime();
+</script>
+</body>
+</html>

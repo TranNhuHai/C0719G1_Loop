@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh_lai_kep</title>
+</head>
+<body>
+ <script>
+     let P=Number(prompt(" Nhap so tien ban muon vay: "));
+     let i= Number(prompt(" ty so lai suat hang thang phai chiu: %"));
+     let month=parseInt(prompt("thoi gian vay: Tinh theo thang"));
+     if(i>=1){
+         i=i/100;
+     }
+     let fn=P*(Math.pow((1+i), month));
+     alert("so tien phai tra "+fn);
+ </script>
+</body>
+</html>

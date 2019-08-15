@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giac vuong</title>
+</head>
+<body>
+<script>
+    document.write("Hinh1 <br>");
+    for(number =1; number<=5; number++){
+        for(let i=1;i<=number;i++){
+            document.write('* ');
+        }document.write("<br>");
+    }
+    document.write("Hinh 2 <br>");
+    for(number=5; number>=1; number--){
+        for (let i=1;i<=number;i++ ){
+            document.write('* ')
+        }document.write("<br>");
+    }
+    document.write("Hinh 3 <br>");
+    for(let number=1; number<=5; number++){
+        document.write(" ")
+        for(let i=1; i<=5-number; i++){
+            document.write("__");
+        }
+        for (let j=1;j<=number;j++){
+            document.write("*_");
+        }
+        document.write("<br>");
+    }
+    document.write("Hinh 4 <br>");
+    for(number=5; number>=1; number--){
+        for (let i=1;i<=5-number;i++ ){
+            document.write('__')
+        }
+        for(let j=1;j<=number; j++){
+            document.write("*_")
+        }
+            document.write("<br>");
+    }
+    document.write("Hinh 5 <br>");
+    for(let i=1; i<=5; i++){
+        for(let j=1;j<=5;j++){
+           if(i>=2&&i<=4&&j>=2&&j<=4){
+               document.write('__');
+           }else {
+                document.write('*_');
+            }
+        }document.write('<br>');
+   }
+</script>
+</body>
+</html>

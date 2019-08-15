@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number</title>
+</head>
+<button type="button" onclick="play()" style="height: 50px;width: 150px; color: darkred;position: absolute; left: 40%;top: 50%">Click here to Play</button>
+<body>
+<script>
+    function play(){
+    let number1=parseInt(prompt('Min: '));
+    let number2=parseInt(prompt('Max: '));
+    let numRandom=Math.floor(Math.random() * (number2 - number1+1))  + number1;
+    let number=prompt("Guess 1st: ");
+    let count =1;
+    console.log(numRandom);
+     document.write(numRandom);
+            while(count<3){
+                if(number<numRandom){
+                    alert("So ban du doan nho hon. Please enter again:");
+                    number =prompt(" try again nd:");
+                    count=count+1;
+                }else if(number>numRandom){
+                    alert(' so ban doan lon hon. Please enter again: ');
+                    number =prompt(" try again th: ");
+                    count = count+1;
+                     }else {
+                    alert('Happy! have fun..')
+                }if(count==3 && number!=numRandom){
+                    alert("I 'm sorry! You fail:")
+                }
+            }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<p id = 'show'></p>
+<script>
+ let number =prompt("Nhap");
+   function printFibonacci() {
+       let sumFibonacci = 0;
+       if (number == 1)
+           document.write(fibonacci(0) + "tong la: 0");
+       else if (number == 2)
+           document.write(fibonacci(0) + " " + fibonacci(1) + "tong la: 1");
+       else {
+           for (let i = 0; i < number; i++) {
+               sumFibonacci += fibonacci(i);
+               document.write(" " + fibonacci(i));
+           }
+           document.write(" Tong: " + (sumFibonacci));
+       }
+
+   }
+       function fibonacci(num) {
+           if (num == 0) return 0;
+            else if (num == 1) return 1;
+              else if (num == 2) return 1;
+                 else return fibonacci(num - 1) + fibonacci(num - 2);
+
+       }
+
+ function findNumber() {
+       let count =0;
+        while (count < 1){
+            for(let i=1; i<number; i++){
+                if(fibonacci(i)%5==0){
+                    count=count+1;
+                    document.write(" so dau trong day chia het cho 5 la:" +fibonacci(i));
+                    break;
+                }
+            }
+        }
+
+    }
+    printFibonacci();
+   findNumber();
+</script>
+</body>
+</html>
